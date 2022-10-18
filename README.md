@@ -1,3 +1,5 @@
 # Trilha JS Developer - Pokedex
 
-<img src="./assets/readme/animação.gif"/>
+Desafio de projeto destinado a treinar habilidades na função de requisição de Api's de uma pokedex.
+
+<img src="/assets/readme/animação.gif"/>
