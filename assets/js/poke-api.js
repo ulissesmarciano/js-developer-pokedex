@@ -45,11 +45,11 @@ function convertPokeApiDetailToPokemonDetail(pokeDetail) {
     const pokemon = new PokemonDetail();
     pokemon.number = pokeDetail.id;
     pokemon.name = pokeDetail.name;
-    pokemon.baseExperience = pokeDetail.base_experience;
     pokemon.order = pokeDetail.order;
-    pokemon.isDefault = pokeDetail.is_default;
     pokemon.weight = pokeDetail.weight;
+    pokemon.weightkg = (pokemon.weight / 2.046).toFixed(1);
     pokemon.height = pokeDetail.height;
+    pokemon.heightmt = (pokemon.height / 3.2808).toFixed(2)
     pokemon.order = pokeDetail.order;
     const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
     const [type] = types;
@@ -58,6 +58,12 @@ function convertPokeApiDetailToPokemonDetail(pokeDetail) {
     pokemon.type = type;
 
     pokemon.photos = Object.values(pokeDetail.sprites);
+
+    const abilities = pokeDetail.abilities.map((abilitySlot) => abilitySlot.ability.name);
+    const [ability] = abilities;
+
+    pokemon.abilities = abilities;
+    pokemon.ability = ability;
 
     return pokemon;
 }
