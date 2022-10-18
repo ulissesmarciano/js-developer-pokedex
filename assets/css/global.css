@@ -14,6 +14,10 @@ body {
     background-color: #fff;
 }
 
+.link{
+   text-decoration: none;
+}
+
 @media screen and (min-width: 992px) {
     .content {
         max-width: 992px;

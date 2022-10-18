@@ -33,3 +33,31 @@ pokeApi.getPokemons = (offset = 0, limit = 5) => {
         .then((detailRequests) => Promise.all(detailRequests))
         .then((pokemonsDetails) => pokemonsDetails)
 }
+
+function getPokemonDetails(id){
+    let pokemonUrl = "https://pokeapi.co/api/v2/pokemon/"+id;
+    return fetch(pokemonUrl).then((response) => response.json())
+    .then(convertPokeApiDetailToPokemonDetail)
+}
+
+
+function convertPokeApiDetailToPokemonDetail(pokeDetail) {
+    const pokemon = new PokemonDetail();
+    pokemon.number = pokeDetail.id;
+    pokemon.name = pokeDetail.name;
+    pokemon.baseExperience = pokeDetail.base_experience;
+    pokemon.order = pokeDetail.order;
+    pokemon.isDefault = pokeDetail.is_default;
+    pokemon.weight = pokeDetail.weight;
+    pokemon.height = pokeDetail.height;
+    pokemon.order = pokeDetail.order;
+    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
+    const [type] = types;
+
+    pokemon.types = types;
+    pokemon.type = type;
+
+    pokemon.photos = Object.values(pokeDetail.sprites);
+
+    return pokemon;
+}
