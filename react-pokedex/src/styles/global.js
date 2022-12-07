@@ -11,7 +11,9 @@ export default createGlobalStyle`
     body{
         font-family: Roboto;
 
-        background-color: #CB2743;
+        background-color: #C01733;
+        max-width: 62.5rem;
+        margin: auto;
     }
     
 `
