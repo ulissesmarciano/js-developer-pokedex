@@ -15,5 +15,9 @@ export default createGlobalStyle`
         max-width: 62.5rem;
         margin: auto;
     }
+
+    a {
+        text-decoration: none;
+    }
     
 `

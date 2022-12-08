@@ -1,14 +1,32 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
+import { Container } from './styles'
+
+import { Pokemon } from '../../components/Pokemon'
 
 
 const Home = () => {
   return (
-    <div>
-        <h1>Home</h1>
-        <Link to="/Perfil">Página do Pokemon</Link>
-    </div>
+    <Container>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+        <Pokemon/>
+    </Container>
   )
 }
 
