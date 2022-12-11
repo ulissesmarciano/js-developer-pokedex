@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom'
 
 import { Container, TitleContainer, ImageContainer, InfoContainer, TypesContainer, IdContainer } from './styles'
 
-const  Pokemon = () => {
+const  PokemonCard = ({name, avatar, id}) => {
   return (
     <Link to="/Perfil">
     <Container>
         <TitleContainer>
-            <h3>Bulbassaur</h3>
+            <h3>{name}</h3>
         </TitleContainer>
         <ImageContainer>
-            <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg' alt='Foto do Pokémon' />
+            <img src={avatar} alt="Foto do Pokemon"/>
         </ImageContainer>
         <InfoContainer>
             <TypesContainer>
@@ -22,7 +22,7 @@ const  Pokemon = () => {
                 </ul>
             </TypesContainer>
             <IdContainer>
-                <p>#001</p>
+                <p>#{id < 10 ? `0${id}`: `${id}`}</p>
             </IdContainer>
         </InfoContainer>
     </Container>
@@ -30,4 +30,4 @@ const  Pokemon = () => {
   )
 }
 
-export { Pokemon }
+export { PokemonCard }

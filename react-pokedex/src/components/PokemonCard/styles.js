@@ -1,8 +1,6 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    max-width: 12rem;
-    max-height: 12rem;
     height: 100%;
     width: 100%;
     margin: auto;
@@ -25,6 +23,7 @@ export const TitleContainer = styled.div`
         color: #c95467;
         font-weight: 400;
         font-size: 1.25rem;
+        text-transform: capitalize;
     }
 `
 
@@ -50,7 +49,8 @@ export const InfoContainer = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    font-size: .8rem;
+    font-size: .7rem;
+
 `
 
 export const TypesContainer = styled.div`
@@ -60,7 +60,12 @@ export const TypesContainer = styled.div`
         display: flex;
 
         li {
-            margin-right: .3rem;
+            margin: 0 .2rem;
+            padding: .2rem .3rem;
+            border-radius: .5rem;
+            
+            font-size: .8rem;
+            color: #000000;
             background-color: #97cd45;
         }
     }

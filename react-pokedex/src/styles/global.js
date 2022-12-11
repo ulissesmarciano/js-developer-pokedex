@@ -11,13 +11,14 @@ export default createGlobalStyle`
     body{
         font-family: Roboto;
 
-        background-color: #C01733;
+        background-color: #FFFFFF;
         max-width: 62.5rem;
         margin: auto;
     }
 
     a {
         text-decoration: none;
+
     }
     
 `
